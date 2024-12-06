@@ -1,6 +1,6 @@
 // Hero.jsx
 import React from 'react';
-import profileImage from '../assets/IDPhoto_20241003_124318.jpg';
+import profileImage from '../assets/IMG_20240109_145404_989.jpg';
 import { FaDownload, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="relative w-[300px] h-[300px] mx-auto">
             <div className="absolute inset-0 bg-[#F3FFB6] rounded-full blur-3xl opacity-20"></div>
             <img
-            src='../assets/IDPhoto_20241003_124318.jpg'
+            src={profileImage}
             alt="Professional headshot"
             className="relative z-10 w-full h-full rounded-full object-cover border-4 border-[#F3FFB6]"
             />
