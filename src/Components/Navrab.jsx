@@ -1,6 +1,6 @@
-// Navbar.jsx
+// Navrab.jsx
 import React, { useState } from 'react';
-import { FaBars, FaTimes, FaHome, FaUser, FaProjectDiagram, FaEnvelope } from 'react-icons/fa';
+import { FaHome, FaUser, FaProjectDiagram, FaEnvelope, FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = ({ setActiveSection }) => {
   const [nav, setNav] = useState(false);
@@ -14,42 +14,19 @@ const Navbar = ({ setActiveSection }) => {
     { id: 'home', name: 'Home', icon: <FaHome /> },
     { id: 'about', name: 'About', icon: <FaUser /> },
     { id: 'projects', name: 'Projects', icon: <FaProjectDiagram /> },
-    { id: 'contact', name: 'Contact', icon: <FaEnvelope /> }
+    { id: 'contact', name: 'Contact', icon: <FaEnvelope /> },
   ];
+
+  const toggleNav = () => {
+    setNav(!nav);
+  };
 
   return (
     <>
-      {/* Desktop Sidebar */}
-      <div className="fixed top-0 left-0 hidden md:flex flex-col w-[200px] h-screen bg-[#1f1f1f] text-white">
-        <div className="p-6">
-          <h1 className="text-2xl font-bold text-[#F3FFB6]">CodeByOT</h1>
-        </div>
-        
-        <nav className="flex-1 px-4">
-          <ul className="space-y-4">
-            {links.map(({ id, name, icon }) => (
-              <li key={id}>
-                <button
-                  onClick={() => handleNavClick(id)}
-                  className="w-full flex items-center gap-3 p-3 text-gray-400 hover:text-[#F3FFB6] hover:bg-[#2d2d2d] rounded-lg transition-all duration-300"
-                >
-                  {icon}
-                  <span>{name}</span>
-                </button>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
-
-      {/* Mobile Navbar */}
-      <div className="fixed top-0 left-0 w-full h-16 md:hidden bg-[#1f1f1f] flex items-center justify-between px-4 z-50">
-        <h1 className="text-xl font-bold text-[#F3FFB6]">CodeByOT</h1>
-        <button
-          onClick={() => setNav(!nav)}
-          className="text-white focus:outline-none"
-        >
-          {nav ? <FaTimes size={24} /> : <FaBars size={24} />}
+      {/* Mobile Menu Button */}
+      <div className="md:hidden flex items-center p-4 bg-[#1f1f1f]">
+        <button onClick={toggleNav}>
+          {nav ? <FaTimes size={24} className="text-white" /> : <FaBars size={24} className="text-white" />}
         </button>
       </div>
 
@@ -65,7 +42,7 @@ const Navbar = ({ setActiveSection }) => {
                     className="w-full flex items-center gap-3 p-3 text-gray-400 hover:text-[#F3FFB6] hover:bg-[#2d2d2d] rounded-lg transition-all duration-300"
                   >
                     {icon}
-                    <span>{name}</span>
+                    <span className="text-base">{name}</span>
                   </button>
                 </li>
               ))}
@@ -73,6 +50,23 @@ const Navbar = ({ setActiveSection }) => {
           </div>
         </div>
       </div>
+
+      {/* Desktop Navbar */}
+      <nav className="hidden md:flex fixed top-0 left-0 w-64 h-full bg-[#1f1f1f] p-6">
+        <ul className="space-y-4">
+          {links.map(({ id, name, icon }) => (
+            <li key={id}>
+              <button
+                onClick={() => handleNavClick(id)}
+                className="w-full flex items-center gap-3 p-3 text-gray-400 hover:text-[#F3FFB6] hover:bg-[#2d2d2d] rounded-lg transition-all duration-300"
+              >
+                {icon}
+                <span className="text-base">{name}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </>
   );
 };
