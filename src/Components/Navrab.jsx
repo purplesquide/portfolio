@@ -1,4 +1,4 @@
-// Navrab.jsx
+// Navbar.jsx
 import React, { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -11,15 +11,15 @@ const Navbar = ({ setActiveSection }) => {
   };
 
   return (
-    <div className="navbar">
+    <div className="navbar flex justify-between items-center p-4 bg-[#0f0f0f] text-white fixed w-full z-10">
       <div className="hamburger md:hidden" onClick={() => setNav(!nav)}>
         {!nav ? <FaBars /> : <FaTimes />}
       </div>
 
-      <h1>CodeByOT</h1>
+      <h1 className="text-2xl font-bold">CodeByOT</h1>
 
       {/* Desktop menu */}
-      <ul className="hidden md:flex flex-col">
+      <ul className="hidden md:flex gap-8">
         <li 
           onClick={() => handleNavClick('home')}
           className="cursor-pointer hover:text-[#F3FFB6] transition-all duration-300"
@@ -48,7 +48,7 @@ const Navbar = ({ setActiveSection }) => {
 
       {/* Mobile menu */}
       {nav && (
-        <ul className="mobile-menu">
+        <ul className="mobile-menu absolute top-16 left-0 w-full bg-[#0f0f0f] flex flex-col items-center gap-4 py-4">
           <li onClick={() => handleNavClick('home')}>Home</li>
           <li onClick={() => handleNavClick('about')}>About</li>
           <li onClick={() => handleNavClick('projects')}>Projects</li>
