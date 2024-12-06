@@ -5,7 +5,7 @@ import { FaDownload, FaEnvelope } from 'react-icons/fa';
 
 const Hero = () => {
   return (
-    <div className="w-full h-screen ml-[200px] bg-[#0f0f0f] flex items-center px-4">
+    <div className="w-full h-auto md:h-screen ml-0 md:ml-64 bg-[#0f0f0f] flex items-center px-4 py-8">
       <div className="max-w-[1000px] mx-auto flex flex-col md:flex-row justify-between items-center">
         {/* Text Content */}
         <div className="text-white md:w-1/2">
@@ -19,13 +19,13 @@ const Hero = () => {
           </p>
           
           {/* CTA Buttons */}
-          <div className="flex gap-4 mt-4">
-            <button className="px-6 py-3 bg-[#F3FFB6] text-gray-900 rounded-full font-semibold hover:bg-[#d9e59f] transition-all duration-300">
-              <FaDownload className="inline mr-2" />
+          <div className="flex flex-col sm:flex-row gap-4 mt-4">
+            <button className="px-6 py-3 bg-[#F3FFB6] text-gray-900 rounded-full font-semibold hover:bg-[#d9e59f] transition-all duration-300 flex items-center justify-center">
+              <FaDownload className="mr-2" />
               Download CV
             </button>
-            <button className="px-6 py-3 border-2 border-[#F3FFB6] text-[#F3FFB6] rounded-full font-semibold hover:bg-[#F3FFB6] hover:text-gray-900 transition-all duration-300">
-              <FaEnvelope className="inline mr-2" />
+            <button className="px-6 py-3 border-2 border-[#F3FFB6] text-[#F3FFB6] rounded-full font-semibold hover:bg-[#F3FFB6] hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
+              <FaEnvelope className="mr-2" />
               Hire Me
             </button>
           </div>
@@ -33,12 +33,12 @@ const Hero = () => {
 
         {/* Image */}
         <div className="md:w-1/2 mt-8 md:mt-0">
-          <div className="relative w-[300px] h-[300px] mx-auto">
+          <div className="relative w-64 h-64 md:w-[300px] md:h-[300px] mx-auto">
             <div className="absolute inset-0 bg-[#F3FFB6] rounded-full blur-3xl opacity-20"></div>
             <img
-            src={profileImage}
-            alt="Professional headshot"
-            className="relative z-10 w-full h-full rounded-full object-cover border-4 border-[#F3FFB6]"
+              src={profileImage}
+              alt="Professional headshot"
+              className="relative z-10 w-full h-full rounded-full object-cover border-4 border-[#F3FFB6]"
             />
           </div>
         </div>

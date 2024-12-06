@@ -78,9 +78,9 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <div className="flex-1 ml-[200px] min-h-screen bg-[#0f0f0f] p-8">
+    <div className="ml-0 md:ml-64 min-h-screen bg-[#0f0f0f] p-4 md:p-8">
       <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {projectData.map((project, index) => (
             <div 
               key={index}
@@ -96,12 +96,8 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-white mb-3">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-4 text-sm">
-                  {project.description}
-                </p>
+                <h3 className="text-xl font-semibold text-white mb-3">{project.title}</h3>
+                <p className="text-gray-400 mb-4 text-sm">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, i) => (
