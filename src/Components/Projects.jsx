@@ -3,12 +3,12 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi';
 
 const projectData = [
   {
-    title: "Weather Dashboard",
-    description: "Real-time weather application with OpenWeatherMap API integration, featuring dynamic UI updates and responsive design",
-    image: "https://via.placeholder.com/500/2d2d2d/ffffff?text=Weather+App",
-    technologies: ["React", "OpenWeatherMap API", "TailwindCSS", "Axios"],
-    githubLink: "https://github.com/yourusername/weather-app",
-    liveLink: "https://weather-app-demo.com",
+    title: "Coffe-shop Website",
+    description: "A simple website for a coffee shop with a modern design and responsive layout",
+    image: "https://via.placeholder.com/500/2d2d2d/ffffff?text=Coffe+Shop",
+    technologies: ["React", "TailwindCSS"],
+    githubLink: "https://github.com/purplesquide/coffe-shop",
+    liveLink: "https://coffe-shop-pi-six.vercel.app/",
   },
   {
     title: "E-Commerce Platform",
