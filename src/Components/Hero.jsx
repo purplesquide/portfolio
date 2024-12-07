@@ -20,10 +20,7 @@ const Hero = () => {
           </p>
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
-            <button className="px-6 py-3 bg-[#F3FFB6] text-gray-900 rounded-full font-semibold hover:bg-[#d9e59f] transition-all duration-300 flex items-center justify-center">
-              <FaDownload className="mr-2" />
-              Download CV
-            </button>
+            
             <button className="px-6 py-3 border-2 border-[#F3FFB6] text-[#F3FFB6] rounded-full font-semibold hover:bg-[#F3FFB6] hover:text-gray-900 transition-all duration-300 flex items-center justify-center">
               <FaEnvelope className="mr-2" />
               Hire Me
