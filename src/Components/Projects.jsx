@@ -13,7 +13,7 @@ const projectData = [
   {
     title: "Tetris Game",
     description: "Classic Tetris game with custom styling and keyboard controls ",
-    image: "https://via.placeholder.com/500/2d2d2d/ffffff?text=E-Commerce",
+    image: "https://via.placeholder.com/500/2d2d2d/ffffff?text=Tetris+Game",
     technologies: ["Javascript"],
     githubLink: "https://github.com/purplesquide/tetris",
     liveLink: "https://tetris-a13dshia4-purplesquides-projects.vercel.app/",
