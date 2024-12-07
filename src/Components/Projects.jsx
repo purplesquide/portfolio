@@ -11,12 +11,12 @@ const projectData = [
     liveLink: "https://coffe-shop-pi-six.vercel.app/",
   },
   {
-    title: "E-Commerce Platform",
-    description: "Full-featured online store with user authentication, product filtering, and shopping cart functionality",
+    title: "Tetris Game",
+    description: "Classic Tetris game with custom styling and keyboard controls ",
     image: "https://via.placeholder.com/500/2d2d2d/ffffff?text=E-Commerce",
-    technologies: ["React", "Firebase", "Redux", "Stripe"],
-    githubLink: "https://github.com/yourusername/ecommerce",
-    liveLink: "https://ecommerce-demo.com",
+    technologies: ["Javascript"],
+    githubLink: "https://github.com/purplesquide/tetris",
+    liveLink: "https://tetris-a13dshia4-purplesquides-projects.vercel.app/",
   },
   {
     title: "Expense Tracker",
