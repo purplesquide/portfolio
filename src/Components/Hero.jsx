@@ -13,8 +13,8 @@ const Hero = () => {
           <h2 className="text-[#F3FFB6] text-xl font-semibold">Hello, I'm</h2>
           <h1 className="text-4xl sm:text-5xl font-bold py-4 text-white">Ouassim Touati</h1>
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-400">
-            Full Stack Developer 
-            / Data Scientist
+            Full Stack Developer /
+            Data Scientist
           </h2>
           <p className="text-gray-400 py-4 max-w-[700px] mx-auto md:mx-0">
             I specialize in building exceptional digital experiences.
